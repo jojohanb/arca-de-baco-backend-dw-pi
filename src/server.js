@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 import cors from "@fastify/cors";
-import encurtarRoutes from './modules/routes/adega.routes.js';
+import adegaRoutes from './modules/routes/adega.routes.js';
 import db from "./infra/connection.js";
 
 const fastify = Fastify({ logger: true });

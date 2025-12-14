@@ -1,3 +1,4 @@
+// Tabela de vinhos 
 import {
   pgTable,
   serial,
@@ -18,6 +19,16 @@ export const vinhos = pgTable("vinhos", {
 
   preco: numeric("preco", { precision: 10, scale: 2 }).notNull(),
   estoque: integer("estoque").default(0),
+
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+// Tabela de compras 
+export const compras = pgTable("compras", {
+  id: serial("id").primaryKey(),
+
+  itens: jsonb("itens").notNull(),
+  valorTotal: numeric("valor_total", { precision: 10, scale: 2 }).notNull(),
 
   createdAt: timestamp("created_at").defaultNow(),
 });

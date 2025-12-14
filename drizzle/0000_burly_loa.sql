@@ -4,7 +4,7 @@ CREATE TABLE "compras" (
 	"valor_total" numeric(10, 2) NOT NULL,
 	"created_at" timestamp DEFAULT now()
 );
---> statement-breakpoint
+
 CREATE TABLE "vinhos" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"nome" text NOT NULL,

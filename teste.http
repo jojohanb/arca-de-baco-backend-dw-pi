@@ -1,0 +1,26 @@
+### Criar vinho
+POST http://localhost:3333/api/vinhos
+Content-Type: application/json
+
+{
+  "nome": "Vinho Tinto Reserva",
+  "tipo": "Tinto",
+  "uva": "Cabernet Sauvignon",
+  "safra": 2021,
+  "preco": 89.90,
+  "estoque": 12
+}
+
+### Listar vinhos
+GET http://localhost:3333/api/vinhos
+
+### Atualizar vinho
+PUT http://localhost:3333/api/vinhos/2
+Content-Type: application/json
+
+{
+  "preco": 99.90,
+  "estoque": 20
+}
+### Deletar vinho
+DELETE http://localhost:3333/api/vinhos/2

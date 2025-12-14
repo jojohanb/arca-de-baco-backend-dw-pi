@@ -24,3 +24,39 @@ Content-Type: application/json
 }
 ### Deletar vinho
 DELETE http://localhost:3333/api/vinhos/2
+
+### Criar compra
+POST http://localhost:3333/api/compras
+Content-Type: application/json
+
+{
+  "itens": [
+    {
+      "vinho_id": 1,
+      "nome": "Vinho Tinto Reserva",
+      "quantidade": 2,
+      "preco_unitario": 89.90
+    },
+    {
+      "vinho_id": 2,
+      "nome": "Vinho Branco",
+      "quantidade": 1,
+      "preco_unitario": 59.90
+    }
+  ],
+  "valorTotal": 239.70
+}
+
+###Listar compras 
+GET http://localhost:3333/api/compras
+
+###Atualizar
+PUT http://localhost:3333/api/compras/3
+Content-Type: application/json
+
+{
+  "valorTotal": 199.90
+}
+
+###deletar compras
+DELETE http://localhost:3333/api/compras/3

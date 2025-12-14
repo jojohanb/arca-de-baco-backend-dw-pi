@@ -19,6 +19,7 @@ export const vinhos = pgTable("vinhos", {
 
   preco: numeric("preco", { precision: 10, scale: 2 }).notNull(),
   estoque: integer("estoque").default(0),
+  imagemUrl: text("imagem_url"),
 
   createdAt: timestamp("created_at").defaultNow(),
 });

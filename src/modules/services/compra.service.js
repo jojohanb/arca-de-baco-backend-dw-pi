@@ -6,13 +6,13 @@ import { criarCompraRepository,  listarComprasRepository,  atualizarCompraReposi
  
   
 export async function criarCompraService(data) {
-  if (!data.itens || !data.valor_total) {
+  if (!data.itens || !data.valorTotal === undefined) {
     throw new Error("Itens e valor total são obrigatórios");
   }
 
   return criarCompraRepository({
     itens: data.itens,
-    valor_total: data.valor_total,
+    valorTotal: data.valorTotal,
   });
 }
 
